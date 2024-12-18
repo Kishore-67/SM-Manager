@@ -1,0 +1,98 @@
+body {
+    font-family: "Satoshi", sans-serif;
+    margin: 0;
+    background: #f9fafb;
+  }
+  
+  .auth-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .auth-left {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+  }
+  
+  .auth-left h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  
+  .auth-left form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+  }
+  
+  .auth-button {
+    background: #111827;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .auth-divider {
+    text-align: center;
+    margin: 10px 0;
+    color: #6b7280;
+  }
+  
+  .auth-social button {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .google-btn {
+    background: #4285f4;
+    color: white;
+  }
+  
+  .facebook-btn {
+    background: #1877f2;
+    color: white;
+  }
+  
+  .auth-left p {
+    text-align: center;
+  }
+  
+  .auth-left a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .auth-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .auth-right img {
+    width: 90%;
+    border-radius: 10px;
+  }
+  

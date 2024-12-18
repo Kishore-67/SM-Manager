@@ -1,0 +1,281 @@
+.instagram-analytics {
+  padding: 20px;
+  width: 100%;
+}
+
+.instagram-analytics.loading,
+.instagram-analytics.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #E1306C;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.retry-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #E1306C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #c62b5f;
+}
+
+.instagram-header {
+  margin-bottom: 30px;
+}
+
+.instagram-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.overview-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-2px);
+}
+
+.overview-card h3 {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.overview-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recent-posts,
+.profile-info {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.posts-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.post-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-info {
+  flex: 1;
+}
+
+.post-type {
+  font-weight: 500;
+  color: #E1306C;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.post-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.post-stats {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.post-stats span {
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.post-stats a {
+  color: #E1306C;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border: 1px solid #E1306C;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.post-stats a:hover {
+  background: #E1306C;
+  color: white;
+}
+
+.profile-details {
+  margin-top: 15px;
+}
+
+.profile-details p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.profile-details strong {
+  color: #333;
+  margin-right: 5px;
+}
+
+.engagement-info {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.engagement-info h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.engagement-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.age-distribution {
+  margin-top: 15px;
+}
+
+.age-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.age-range {
+  width: 60px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.bar {
+  height: 20px;
+  background: #E1306C;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.percentage {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.hashtag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.hashtag {
+  background: #f0f2f5;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.followers-chart {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.followers-chart .chart-container {
+  height: 200px;
+  width: 100%;
+}
+
+.followers-chart h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .instagram-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-card {
+    flex-direction: column;
+  }
+
+  .post-stats {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -11,6 +11,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import InstagramAnalytics from './InstagramAnalytics';
+import YoutubeAnalytics from './YoutubeAnalytics';
 
 // Register ChartJS components
 ChartJS.register(
@@ -25,6 +27,7 @@ ChartJS.register(
 
 const Dashboard = () => {
   const [activePlatform, setActivePlatform] = useState('All Platforms');
+  const [activeComponent, setActiveComponent] = useState(null);
 
   const platforms = [
     { name: 'All Platforms', icon: '📊' },
@@ -34,6 +37,27 @@ const Dashboard = () => {
     { name: 'Twitter', icon: '🐦' },
     { name: 'LinkedIn', icon: '💼' },
     { name: 'TikTok', icon: '🎵' },
+  ];
+
+  const sidebarItems = [
+    { 
+      name: 'Instagram', 
+      icon: '📸', 
+      component: <InstagramAnalytics /> 
+    },
+    { 
+      name: 'YouTube', 
+      icon: '🎥', 
+      component: <YoutubeAnalytics /> 
+    },
+    { 
+      name: 'Facebook', 
+      icon: '👥' 
+    },
+    { 
+      name: 'Twitter', 
+      icon: '🐦' 
+    }
   ];
 
   const trendingTags = [
@@ -99,6 +123,28 @@ const Dashboard = () => {
     ],
   };
 
+  const [instagramData] = useState({
+    followers: '10.5K',
+    engagement: '3.2%',
+    reachGrowth: '+15%',
+    posts: [
+      { type: 'Image', likes: 1200, comments: 45, shares: 23 },
+      { type: 'Reel', likes: 3500, comments: 120, shares: 89 },
+      { type: 'Carousel', likes: 2100, comments: 67, shares: 34 },
+    ],
+    topHashtags: ['#fashion', '#lifestyle', '#photography', '#travel', '#food'],
+    audienceAge: {
+      '18-24': 30,
+      '25-34': 45,
+      '35-44': 15,
+      '45+': 10,
+    }
+  });
+
+  const handleSidebarItemClick = (item) => {
+    setActiveComponent(item.component);
+  };
+
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
@@ -107,68 +153,72 @@ const Dashboard = () => {
           <h3>Platforms</h3>
         </div>
         <div className="platform-list">
-          {platforms.map((platform) => (
-            <button
-              key={platform.name}
-              className={`platform-button ${activePlatform === platform.name ? 'active' : ''}`}
-              onClick={() => setActivePlatform(platform.name)}
+          {sidebarItems.map((item, index) => (
+            <div 
+              key={index} 
+              className={`sidebar-item ${activeComponent === item.component ? 'active' : ''}`}
+              onClick={() => handleSidebarItemClick(item)}
             >
-              <span className="platform-icon">{platform.icon}</span>
-              {platform.name}
-            </button>
+              <span className="sidebar-icon">{item.icon}</span>
+              <span>{item.name}</span>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Main Content */}
       <div className="dashboard-content">
-        <div className="dashboard-grid">
-          <div className="content-wrapper">
-            {/* Left Column - Stats Cards */}
-            <div className="stats-column">
-              <div className="top-cards">
-                {/* Impressions Card */}
-                <div className="stat-card impressions">
-                  <div className="stat-icon">👁️</div>
-                  <div className="stat-content">
-                    <h3>Total Impressions</h3>
-                    <div className="stat-numbers">
-                      <div className="main-stat">2.4M</div>
-                      <div className="stat-change positive">
-                        <span className="arrow">↑</span>
-                        12.5%
-                      </div>
-                    </div>
-                    <p className="stat-period">vs last week</p>
-                  </div>
-                </div>
-
-                {/* Trending Tags Card */}
-                <div className="stat-card trending">
-                  <div className="stat-icon">🔥</div>
-                  <div className="stat-content">
-                    <h3>Trending Tags</h3>
-                    <div className="trending-tags">
-                      {trendingTags.map((tag, index) => (
-                        <div key={index} className="tag">
-                          <span className="tag-name">{tag.tag}</span>
-                          <span className="tag-count">{tag.count}</span>
+        {activeComponent ? (
+          activeComponent
+        ) : (
+          <div className="dashboard-grid">
+            <div className="content-wrapper">
+              {/* Left Column - Stats Cards */}
+              <div className="stats-column">
+                <div className="top-cards">
+                  {/* Impressions Card */}
+                  <div className="stat-card impressions">
+                    <div className="stat-icon">👁️</div>
+                    <div className="stat-content">
+                      <h3>Total Impressions</h3>
+                      <div className="stat-numbers">
+                        <div className="main-stat">2.4M</div>
+                        <div className="stat-change positive">
+                          <span className="arrow">↑</span>
+                          12.5%
                         </div>
-                      ))}
+                      </div>
+                      <p className="stat-period">vs last week</p>
+                    </div>
+                  </div>
+
+                  {/* Trending Tags Card */}
+                  <div className="stat-card trending">
+                    <div className="stat-icon">🔥</div>
+                    <div className="stat-content">
+                      <h3>Trending Tags</h3>
+                      <div className="trending-tags">
+                        {trendingTags.map((tag, index) => (
+                          <div key={index} className="tag">
+                            <span className="tag-name">{tag.tag}</span>
+                            <span className="tag-count">{tag.count}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Column - Chart */}
-            <div className="chart-column">
-              <div className="chart-card">
-                <Line options={options} data={data} />
+              {/* Right Column - Chart */}
+              <div className="chart-column">
+                <div className="chart-card">
+                  <Line options={options} data={data} />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

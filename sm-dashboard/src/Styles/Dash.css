@@ -218,6 +218,28 @@
   height: 90%;
 }
 
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item.active {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .content-wrapper {
