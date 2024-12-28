@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Nav.css';
-const Nav = () => {
+const BrandNav = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const toggleProfile = () => {
@@ -9,15 +9,12 @@ const Nav = () => {
   };
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="nav-brand">
         <Link to="/">SM Dashboard</Link>
       </div>
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/Post Scheduling">Post Scheduling</Link>
-        <Link to="/creators">Creator's tools</Link>
+        <Link to="/Brand">Discover</Link>
         <Link to="/settings">Settings</Link>
         <div className="profile-menu">
           <button className="profile-button" onClick={toggleProfile}>
@@ -37,8 +34,8 @@ const Nav = () => {
           )}
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
-export default Nav;
+export default BrandNav;

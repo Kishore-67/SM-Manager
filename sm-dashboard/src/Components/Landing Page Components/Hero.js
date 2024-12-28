@@ -8,9 +8,9 @@ const Hero = () => {
         <h1>Introduce Your Product Quickly & Effectively</h1>
         <p>
           In today's fast-paced digital world, managing multiple social media
-          platforms can be overwhelming. That’s why we’ve built an intuitive
+          platforms can be overwhelming. That's why we've built an intuitive
           dashboard designed to simplify and enhance your social media
-          marketing efforts. Whether you’re a solopreneur, a growing business,
+          marketing efforts. Whether you're a solopreneur, a growing business,
           or a seasoned marketer, our tool equips you with everything you need
           to succeed in the competitive online landscape.
         </p>

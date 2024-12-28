@@ -1,0 +1,121 @@
+body {
+    font-family: "Satoshi", sans-serif;
+    margin: 0;
+    background: #f9fafb;
+  }
+  
+  .auth-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .auth-left {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+  }
+  
+  .auth-left h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  
+  .auth-left form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem; /* Ensures text is readable */
+  }
+  
+  .auth-button {
+    background: #111827;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    width: 100%; /* Ensures button takes full width */
+  }
+  
+  .auth-button:disabled {
+    background: #9ca3af; /* Grayed-out color for disabled state */
+  }
+  
+  .auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .auth-divider {
+    text-align: center;
+    margin: 10px 0;
+    color: #6b7280;
+  }
+  
+  .auth-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6; /* Light background for the right side */
+    height: 100%;
+  }
+  
+  .auth-right img {
+    width: auto;
+    height: 100%;
+    max-width: 600px; /* Set a maximum width */
+    object-fit: contain; /* Ensures the image scales correctly without being cropped */
+    border-radius: 10px;
+  }
+  
+  .terms {
+    margin: 20px 0;
+  }
+  
+  .terms p {
+    margin-bottom: 10px;
+  }
+  
+  .terms ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .terms ul li {
+    margin-bottom: 5px;
+  }
+  
+  .terms input {
+    margin-right: 10px;
+  }
+  
+  .social-media-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-media-inputs input {
+    width: 100%;
+  }
+  
