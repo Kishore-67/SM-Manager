@@ -16,9 +16,10 @@ const Nav = () => {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/dashboard">Dashboard</Link>
+        <Link to="/messages">Messages</Link>
         <Link to="/Post Scheduling">Post Scheduling</Link>
         <Link to="/creators">Creator's tools</Link>
-        <Link to="/settings">Settings</Link>
+        
         <div className="profile-menu">
           <button className="profile-button" onClick={toggleProfile}>
             <img

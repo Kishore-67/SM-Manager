@@ -12,7 +12,7 @@ const Brandauth = () => {
 
 
 
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -58,6 +58,34 @@ const Brandauth = () => {
   return (
     <div className="auth-container">
       <div className="auth-left">
+      {step === 0 && (
+          <>
+            <h1>Signin</h1>
+            <form>
+            <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Example@email.com"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="abc1234"
+                value={formData.empassowrd}
+                onChange={handleInputChange}
+              />
+               <button type="button" className="auth-button" onClick={handleNext}>
+                Submit
+                </button>
+                  <text>Don't have an account?</text>
+                <button>Create an Account</button>
+            </form>
+          </>
+        )}
         {step === 1 && (
           <>
             <h1>Create an Account 🚀</h1>
@@ -227,6 +255,7 @@ const Brandauth = () => {
             </div>
           </>
         )}
+       
       </div>
       <div className="auth-right">
         <img src={loginImage} alt="Background" className="auth-background" />
