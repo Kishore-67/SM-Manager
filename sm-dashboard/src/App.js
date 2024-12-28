@@ -12,6 +12,8 @@ import Creator from './Components/Creators.js';
 import Brand from './Components/Brand.js';
 import Brandauth from './Components/Brandauth';
 import BrandNav from './Components/BrandNav';
+import Messages from './Components/messages';
+import MidnightNetwork from './Components/MidnightNetwork/MidnightNetwork';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/settings" element={<><Nav /><div>Settings Page</div></>} />
           <Route path="/profile" element={<><Nav /><Profile /></>} />
           <Route path="/brandauth" element={<Brandauth />} />
+          <Route path="/messages" element={<><Nav /><Messages /></>} />
+          <Route path="/midnight" element={<><Nav /><MidnightNetwork /></>} />
         </Routes>
       </div>
     </Router>
