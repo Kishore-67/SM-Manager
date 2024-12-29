@@ -20,6 +20,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .header {
@@ -72,40 +75,39 @@ body {
 }
 
 .hero-split {
-  min-height: calc(100vh - 60px);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 .split-container {
   display: flex;
-  flex: 1;
-  position: relative;
-  z-index: 1;
-  height: calc(100vh - 60px);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .split-section {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 1rem;
-}
-
-.split-section:hover {
-  flex: 1.2;
+  margin: 0;
 }
 
 .brand {
-  background: var(--primary-color);
+  background-color: #0a192f;
   color: white;
 }
 
 .influencer {
-  background: var(--secondary-color);
+  background-color: #4a69bd;
   color: white;
 }
 

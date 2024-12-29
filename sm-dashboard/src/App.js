@@ -9,10 +9,11 @@ import Signup from './Authentication/Signup';
 import Login from './Authentication/Login';
 import Scheduler from './Components/Scheduler';
 import Creator from './Components/Creators.js';
-import Brand from './Components/Brand.js';
-import Brandauth from './Components/Brandauth';
+import Brand from './Components/BrandCompo/Brand.js';
+import Brandauth from './Components/BrandCompo/Brandauth';
 import BrandNav from './Components/BrandNav';
 import Messages from './Components/messages';
+import BrandMessaging from './Components/BrandCompo/BrandMessaging';
 import MidnightNetwork from './Components/MidnightNetwork/MidnightNetwork';
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
           <Route path="/profile" element={<><Nav /><Profile /></>} />
           <Route path="/brandauth" element={<Brandauth />} />
           <Route path="/messages" element={<><Nav /><Messages /></>} />
+          <Route path="/brandmessaging" element={<><BrandNav /><BrandMessaging /></>} />
+
           <Route path="/midnight" element={<><Nav /><MidnightNetwork /></>} />
         </Routes>
       </div>

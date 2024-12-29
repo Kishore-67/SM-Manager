@@ -24,10 +24,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {userType === 'brand' && <BrandNav />}
-      {userType === 'influencer' && <Nav />}
-      
-      {/* Hero Split Section */}
       <section className="hero-split">
         <div className="split-container">
           <div className="split-section brand">

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaYoutube, FaSearch, FaFilter } from 'react-icons/fa';
 import { BsPerson, BsEye, BsGeoAlt, BsTags } from 'react-icons/bs';
 import { IoMdPeople } from 'react-icons/io';
-import '../Styles/Brand.css';
+import '../../Styles/Brand.css';
 
 const Brand = () => {
   const [platform, setPlatform] = useState('Instagram');

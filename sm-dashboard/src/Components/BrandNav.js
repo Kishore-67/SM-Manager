@@ -15,6 +15,7 @@ const BrandNav = () => {
       </div>
       <div className="nav-links">
         <Link to="/Brand">Discover</Link>
+        <Link to="/BrandMessaging">Messaging</Link>
         <Link to="/settings">Settings</Link>
         <div className="profile-menu">
           <button className="profile-button" onClick={toggleProfile}>

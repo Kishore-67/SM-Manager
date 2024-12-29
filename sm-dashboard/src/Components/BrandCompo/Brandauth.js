@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../Styles/brandauth.css";
-import loginImage from "../Asserts/login_back.png";
+import "../../Styles/brandauth.css";
+import loginImage from "../../Asserts/login_back.png";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
